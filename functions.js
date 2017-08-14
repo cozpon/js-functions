@@ -92,6 +92,20 @@ var sum = square(300);
  * @param {number} y
  * @return {number} the result
  */
+/*function mathEquation (x, y, result){
+	return x + y = result;
+}
+var sum = mathEquation(2, 4, 6);
+console.log(mathEquation);
+// num 1 + num 2 = result
+*/
+
+/*function calculate(x, y){
+	return x + y;
+}
+var sum = calculate(90, 10);
+*/
+
 
 /**
  * Returns true if `a` is greater than `b`.
@@ -99,7 +113,10 @@ var sum = square(300);
  * @param {number} b
  * @return {boolean} `a` is larger than `b`
  */
-
+function isGreaterThan(a, b){
+	return a > b;
+}
+var result = isGreaterThan(4, 2);
 
 /**
  * Returns true if `a` is less than `b`.
@@ -108,6 +125,10 @@ var sum = square(300);
  * @return {boolean} `a` is smaller than `b`
  */
 
+function isLessThan(a, b){
+	return a < b;
+}
+var result = isLessThan(2, 4);
 
 /**
  * Returns true if `a` and `b` are equal.
@@ -115,6 +136,11 @@ var sum = square(300);
  * @param {number} b
  * @return {boolean} the numbers are equal
  */
+
+ function areEqual(a, b){
+	return a === b;
+}
+var result = areEqual(2, 2);
 
 
 /**
