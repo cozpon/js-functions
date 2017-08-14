@@ -89,7 +89,6 @@ var sum = square(300);
  * @return {number} the result
  */
 
-
 /**
  * Returns true if `a` is greater than `b`.
  * @param {number} a
