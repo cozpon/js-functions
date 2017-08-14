@@ -2,12 +2,12 @@
  * Converts a number a string.
  * @param {number} n
  * @return {string} the number as a string
- */
-/*var stringNum = function numberToString(n)
-function numberToString(n){
-	numberToString("5")
+*/
+function numberToString(n) {
+var numberAsString = n.toString();
+return numberAsString;
 }
-
+var newString = numberToString(5);
 
 /**
  * Adds one to a given number.
@@ -15,16 +15,20 @@ function numberToString(n){
  * @return {number}
  */
 
-
+ function increase(n) {
+ 	var numberIncrease = (n + 1);
+ 	return numberIncrease;
+ }
 /**
  * Subtracts one from a given number.
  * @param {number} n
  * @return {number}
  */
-function subtractOne (n){
-	return n--;
-}
-var sum = subtractOne(45);
+
+ function decrease(n) {
+ 	var numberDecrease = (n - 1);
+ 	return numberDecrease;
+ }
 
 /**
  * Adds two numbers.
