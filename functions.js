@@ -149,15 +149,20 @@ var result = areEqual(2, 2);
  * @param {number} y
  * @return {number} the smallest number
  */
-
-
+function minimum (x, y){
+	return Math.min(x, y);
+}
+var sum = Math.min(5, 10);
 /**
  * Returns the largest value of two numbers.
  * @param {number} x
  * @param {number} y
  * @return {number} the largest number
  */
-
+function maximum (x, y){
+	return Math.max(x, y);
+}
+var sum = Math.max(5, 10);
 
 /**
  * Returns true if `n` is even.
@@ -186,6 +191,7 @@ var result = areEqual(2, 2);
  */
 
 
+
 /**
  * Checks if a `restaurant` object has a `reviews` property.
  * If it does, increase the property's `reviews` value by 1.
@@ -201,7 +207,10 @@ var result = areEqual(2, 2);
  * @param {string} word2
  * @return {string} joined the words joined with a space
  */
-
+function combine(word1, word2){
+	 return word1 + " " + word2;
+}
+var result = combine("Game", "over");
 
 /**
  * Returns a circle object with the properties `circumference` and `area`.
