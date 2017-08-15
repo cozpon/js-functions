@@ -3,11 +3,11 @@
  * @param {number} n
  * @return {string} the number as a string
 */
+
 function numberToString(n) {
 var numberAsString = n.toString();
 return numberAsString;
-}
-var newString = numberToString(5);
+};
 
 /**
  * Adds one to a given number.
@@ -18,7 +18,8 @@ var newString = numberToString(5);
  function increase(n) {
  	var numberIncrease = (n + 1);
  	return numberIncrease;
- }
+ };
+
 /**
  * Subtracts one from a given number.
  * @param {number} n
@@ -28,7 +29,7 @@ var newString = numberToString(5);
  function decrease(n) {
  	var numberDecrease = (n - 1);
  	return numberDecrease;
- }
+ };
 
 /**
  * Adds two numbers.
@@ -38,8 +39,7 @@ var newString = numberToString(5);
  */
 function add (x, y){
 	return x + y;
-}
-var sum = add(90, 10);
+};
 
 /**
  * Subtracts the second number from the first.
@@ -49,8 +49,7 @@ var sum = add(90, 10);
  */
 function subtract (x, y){
 	return x - y;
-}
-var sum = subtract(9, 30);
+};
 
 /**
  * Multiplies two numbers.
@@ -60,8 +59,7 @@ var sum = subtract(9, 30);
  */
 function multiply (x, y){
 	return x * y;
-}
-var sum = multiply(2, 10);
+};
 
 /**
  * Divides the first number by the second.
@@ -71,8 +69,7 @@ var sum = multiply(2, 10);
  */
 function divide (x, y){
 	return x / y;
-}
-var sum = divide(300, 3);
+};
 
 /**
  * Multiplies a number by itself.
@@ -81,8 +78,7 @@ var sum = divide(300, 3);
  */
 function square (x){
 	return x * x;
-}
-var sum = square(300);
+};
 
 /**
  * Performs a mathematical operation on two numbers.
@@ -92,19 +88,24 @@ var sum = square(300);
  * @param {number} y
  * @return {number} the result
  */
-/*function mathEquation (x, y, result){
-	return x + y = result;
-}
-var sum = mathEquation(2, 4, 6);
-console.log(mathEquation);
-// num 1 + num 2 = result
-*/
 
-/*function calculate(x, y){
-	return x + y;
-}
-var sum = calculate(90, 10);
-*/
+function calculate (operation, x, y){
+	var result = 0
+	if(operation === "add"){
+		result = x + y;
+		console.log(x + " + " + y + " = " + result);
+		} else if(operation === "subtract"){
+				result = x - y;
+				console.log(x + " - " + y + " = " + result);
+		} else if(operation === "multiply"){
+				result = x * y;
+				console.log(x + " * " + y + " = " + result);
+		} else if(operation === "divide"){
+				result = x / y;
+				console.log(x + " / " + y + " = " + result);
+		}
+	return result;
+};
 
 
 /**
@@ -115,8 +116,7 @@ var sum = calculate(90, 10);
  */
 function isGreaterThan(a, b){
 	return a > b;
-}
-var result = isGreaterThan(4, 2);
+};
 
 /**
  * Returns true if `a` is less than `b`.
@@ -127,8 +127,7 @@ var result = isGreaterThan(4, 2);
 
 function isLessThan(a, b){
 	return a < b;
-}
-var result = isLessThan(2, 4);
+};
 
 /**
  * Returns true if `a` and `b` are equal.
@@ -137,11 +136,9 @@ var result = isLessThan(2, 4);
  * @return {boolean} the numbers are equal
  */
 
- function areEqual(a, b){
+function areEqual(a, b){
 	return a === b;
-}
-var result = areEqual(2, 2);
-
+};
 
 /**
  * Returns the smallest value of two numbers.
@@ -151,8 +148,8 @@ var result = areEqual(2, 2);
  */
 function minimum (x, y){
 	return Math.min(x, y);
-}
-var sum = Math.min(5, 10);
+};
+
 /**
  * Returns the largest value of two numbers.
  * @param {number} x
@@ -161,22 +158,33 @@ var sum = Math.min(5, 10);
  */
 function maximum (x, y){
 	return Math.max(x, y);
-}
-var sum = Math.max(5, 10);
+};
 
 /**
  * Returns true if `n` is even.
  * @param {number} n
  * @return {boolean} the number is even
  */
-
+function isEven(n){
+	if (n % 2 === 0) {
+		return true;
+	} else {
+		return false;
+	}
+};
 
 /**
  * Returns true if `n` is odd.
  * @param {number} n
  * @return {boolean} the number is odd
  */
-
+function isOdd(n){
+	if (n % 2 != 0) {
+		return true;
+	} else {
+		return false;
+	}
+};
 
 /**
  * Returns a letter grade.
@@ -190,7 +198,21 @@ var sum = Math.max(5, 10);
  * @return {string} the score represented as a letter grade
  */
 
+function letterGrade (score, total) {
+	var percentage = score / total * 100;
 
+	if (percentage < 60) {
+		return "F";
+	} else if (percentage < 70) {
+		return "D";
+	} else if (percentage < 80) {
+		return "C";
+	} else if (percentage < 90) {
+		return "B";
+	} else {
+		return "A";
+	}
+};
 
 /**
  * Checks if a `restaurant` object has a `reviews` property.
@@ -199,6 +221,14 @@ var sum = Math.max(5, 10);
  * @param {object} restaurant   represents a restaurant object
  * @return {object} restaurant
  */
+function incrementReviews(restaurant){
+	if(restaurant.reviews) {
+		restaurant.reviews = restaurant.reviews + 1;
+	} else {
+		restaurant.reviews = 1;
+	} 
+	return restaurant;
+};
 
 
 /**
@@ -207,10 +237,11 @@ var sum = Math.max(5, 10);
  * @param {string} word2
  * @return {string} joined the words joined with a space
  */
+
 function combine(word1, word2){
 	 return word1 + " " + word2;
-}
-var result = combine("Game", "over");
+};
+
 
 /**
  * Returns a circle object with the properties `circumference` and `area`.
@@ -219,4 +250,14 @@ var result = combine("Game", "over");
  * @param {number} radius
  * @return {object} circle
  */
+
+function createCircle(radius) {
+  var circle = {};
+
+  circle.circumference = (2 * Math.PI * radius);
+  circle.area = (Math.PI * radius * radius);
+
+  return circle;
+};
+
 
